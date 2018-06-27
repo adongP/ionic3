@@ -1,0 +1,15 @@
+$bgGreen:#00b350;
+$bgRed:#f74c20;
+page-payment-approval {
+  span.myi:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid red;
+    border-right: 10px solid red;
+  }
+}

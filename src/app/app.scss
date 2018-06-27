@@ -1,0 +1,160 @@
+/// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+$bgGreen:#00b350;
+$bgRed:#f74c20;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ion-md-contact:before,
+.ion-ios-contact-outline:before {
+  background: url(../assets/imgs/public/User.png) center no-repeat;
+}
+
+.ion-md-home:before,
+.ion-ios-home-outline:before {
+  background: url(../assets/imgs/public/home.png) center no-repeat;
+}
+
+.tabs-md .tab-button[aria-selected=true],
+.tabs-ios .tab-button:hover:not(.disable-hover),
+.tabs-ios .tab-button[aria-selected=true] {
+  color: $bgRed !important;
+}
+
+.tabs-md .tab-button[aria-selected=true] .ion-md-contact:before,
+.tab-button[aria-selected=true] .ion-ios-contact:before {
+  background: url(../assets/imgs/public/UserA.png) center no-repeat;
+  background-size: contain;
+}
+
+.tabs-md .tab-button[aria-selected=true] .ion-md-home:before,
+.tab-button[aria-selected=true] .ion-ios-home:before {
+  background: url(../assets/imgs/public/homeA.png) center no-repeat;
+  background-size: contain;
+}
+
+.ion-md-contact:before,
+.ion-md-home:before,
+.ion-ios-home:before,
+.ion-ios-home-outline:before,
+.ion-ios-contact:before,
+.ion-ios-contact-outline:before {
+  content: "";
+  min-height: 2.4rem;
+  min-width: 2.4rem;
+  background-size: contain
+}
+
+.toolbar-background {
+  background: $bgRed;
+  border-color: $bgRed;
+}
+
+.toolbar-title,
+.toolbar-title-md,
+.bar-button-default-md,
+.bar-button-clear-md-default,
+.bar-button-md-default {
+  color: #fff;
+  text-align: center;
+}
+
+// 查询
+.mysearch {
+  display: flex;
+  ion-searchbar {
+    flex: 3;
+    padding: 4px 8px;
+  }
+  p {
+    flex: 2;
+  }
+  .searchbar-search-icon {
+    top: 6px;
+    left: 6px;
+  }
+  .searchbar-input {
+    line-height: 2rem;
+    padding: 2px 30px;
+  }
+  .button {
+    padding: 0px 0.5em;
+    background: $bgGreen;
+  }
+}
+
+// 列表
+.item.item-md .checkbox-md,
+.item.item-ios .checkbox-ios {
+  position: relative !important;
+  margin: 9px 10px 9px 4px;
+  top: -20px;
+}
+
+.item-inner {
+  border: none !important;
+}
+
+.item:nth-of-type(even) {
+  background: #f5f5f5;
+}
+
+.input-wrapper {
+  .part {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .qi,
+  .xian {
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-right: 10px;
+    color: #fff;
+  }
+  .qi {
+    background: #ffa200
+  }
+  .xian {
+    background: #387ff5;
+  }
+}
+
+span.myi {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem; //   background: $bgRed;
+  //   color: #fff;
+}
+
+// 通过  驳回
+.mybtn {
+  display: flex;
+  button {
+    flex: 1;
+    color: #fff;
+  }
+  .secondary {
+    background: $bgGreen;
+  }
+  .danger {
+    background: $bgRed;
+  }
+}

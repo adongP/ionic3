@@ -1,0 +1,13 @@
+page-balance {
+  ion-label>div {
+    display: flex;
+    span,
+    div {
+      flex: 1
+    }
+    div {
+      text-align: right;
+      margin-right: 20px;
+    }
+  }
+}

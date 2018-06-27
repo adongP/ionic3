@@ -1,0 +1,40 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-card class="card">
+    <img src="../../assets/imgs/index/banner.png" alt="">
+  </ion-card>
+  <ion-row *ngFor="let item of list">
+    <div *ngFor="let key of getkeys(item)">
+      <ion-col *ngFor="let item2 of item[key]" (click)="gopage(item2)">
+        <ion-thumbnail>
+          <img src="{{item2.imgUrl}}" alt="">
+        </ion-thumbnail>
+        <p>{{item2.text}}</p>
+
+      </ion-col>
+    </div>
+  </ion-row>
+
+
+  <ion-item-group *ngFor="let item of jieyu">
+    <ion-item-divider>
+      {{item.title}}
+    </ion-item-divider>
+
+    <ion-row>
+      <ion-col *ngFor="let item2 of item.one1" (click)="gopage(item2)">
+        <ion-thumbnail>
+          <img src="{{item2.imgUrl}}" alt="">
+        </ion-thumbnail>
+        <p>{{item2.text}}</p>
+      </ion-col>
+
+    </ion-row>
+  </ion-item-group>
+  <!-- <payment></payment> -->
+</ion-content>
